@@ -4,9 +4,6 @@ const currentWeatherDiv = document.querySelector(".current-weather");
 const hourlyWeatherDiv = document.querySelector(".hourly-weather .weather-list");
 
 
-const API_KEY = "6b2940652a2f4a9a8d234905241009";
-
-
 //Weather codes for mapping to custom icons
 const weatherCodes = {
     clear: [1000],
@@ -77,7 +74,7 @@ const getWeatherDetails = async(API_URL) => {
 
 // Set up the weather request for a specfic city
 const setupWeatherRequest = (cityName) => {
-    const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&days=2`;
+    const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${window.CONFIG.API_KEY}&q=${cityName}&days=2`;
     getWeatherDetails(API_URL);
 }
 
@@ -95,7 +92,7 @@ searchInput.addEventListener("keyup", (e) => {
 locationButton.addEventListener("click", () => {
     navigator.geolocation.getCurrentPosition(position => {
         const { latitude, longitude } = position.coords;
-        const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude},${longitude}&days=2`;
+        const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${window.CONFIG.API_KEY}&q=${latitude},${longitude}&days=2`;
         getWeatherDetails(API_URL);
     }, error => {
         alert("Location access denied. Please anable permissions to use this feature.")
