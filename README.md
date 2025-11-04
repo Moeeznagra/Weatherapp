@@ -2,7 +2,8 @@
 
 A modern, responsive weather application that provides real-time weather information and hourly forecasts for any city worldwide.
 
-![Weather App Screenshot](https://github.com/user-attachments/assets/e7a6c026-7a91-41ae-b221-a532aef48da7)
+<img width="847" height="477" alt="image" src="https://github.com/user-attachments/assets/912ee5c5-0527-4b9f-96b5-2a60268a92fb" />
+
 
 ## 🌐 Live Demo
 
@@ -45,6 +46,13 @@ git clone https://github.com/Moeeznagra/Weatherapp.git
 cd Weatherapp
 ```
 
+3. Create a config.js file
+```javascript
+window.CONFIG = {
+    API_KEY: "" # paste your api key here
+};
+```
+
 3. Open `index.html` in your web browser or use a local server:
 ```bash
 # Using Python 3
@@ -82,13 +90,11 @@ The application is fully responsive and optimized for:
 
 ## 🔑 API Configuration
 
-This app uses [WeatherAPI](https://www.weatherapi.com/) for fetching weather data. The API key is included in the `script.js` file. For production use, consider:
-- Using environment variables to store the API key
-- Implementing a backend proxy to secure your API key
+This app uses [WeatherAPI](https://www.weatherapi.com/) for fetching weather data.
 
 ## 🌍 Default Location
 
-The app defaults to showing weather for **Saskatoon** on initial load.
+The app defaults to showing weather for **New York** on initial load.
 
 ## 📄 License
 
@@ -97,9 +103,3 @@ This project is open source and available for personal and educational use.
 ## 👨‍💻 Author
 
 **Moeez Nagra**
-
-## 🙏 Acknowledgments
-
-- Weather data provided by [WeatherAPI](https://www.weatherapi.com/)
-- Icons and fonts from Google Fonts
-- Hosted on [Netlify](https://www.netlify.com/)
